@@ -10767,6 +10767,7 @@ MonoBehaviour:
   ForceTimescaleMode: 0
   ForcedTimescaleMode: 1
   DurationMultiplier: 1
+  TimescaleMultiplier: 1
   RandomizeDuration: 0
   RandomDurationMultiplier: {x: 0.5, y: 1.5}
   DisplayFullDurationDetails: 0
@@ -10829,6 +10830,9 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     OnSkipToTheEnd:
+      m_PersistentCalls:
+        m_Calls: []
+    OnInitializationComplete:
       m_PersistentCalls:
         m_Calls: []
     OnEnable:
@@ -11116,6 +11120,7 @@ MonoBehaviour:
   ForceTimescaleMode: 0
   ForcedTimescaleMode: 1
   DurationMultiplier: 1
+  TimescaleMultiplier: 1
   RandomizeDuration: 0
   RandomDurationMultiplier: {x: 0.5, y: 1.5}
   DisplayFullDurationDetails: 0
@@ -11178,6 +11183,9 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     OnSkipToTheEnd:
+      m_PersistentCalls:
+        m_Calls: []
+    OnInitializationComplete:
       m_PersistentCalls:
         m_Calls: []
     OnEnable:
@@ -11272,6 +11280,7 @@ MonoBehaviour:
         Owner: {fileID: 2893587470352998581}
         DebugActive: 0
         BoundRenderer: {fileID: 212797044214329334}
+        ExtraBoundRenderers: []
         Mode: 0
         PropertyName: _Tint
         FlickerDuration: 0.2
