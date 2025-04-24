@@ -5,16 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/TopDownEngine/Demos/StartScreen/StartScreen.unity
     guid: 52360e1567e3fee418407abdfd132d73
   - enabled: 1
     path: Assets/Plugins/TopDownEngine/ThirdParty/MoreMountains/MMTools/Core/MMSceneLoading/LoadingScreens/LoadingScreen.unity
     guid: 888394d52616e5e42b3b54c3f2bbd3eb
-  - enabled: 1
+  - enabled: 0
     path: Assets/TopDownEngine/Demos/LevelSelection/LevelSelection.unity
     guid: f991cbe75cb701b43baec351a60a630a
-  - enabled: 1
+  - enabled: 0
     path: Assets/TopDownEngine/Demos/Loft3D/Loft3D.unity
     guid: d1174410a185495439298917edf07eea
   - enabled: 1

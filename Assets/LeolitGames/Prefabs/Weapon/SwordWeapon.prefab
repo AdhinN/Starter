@@ -11,9 +11,11 @@ GameObject:
   - component: {fileID: 8756719414338310398}
   - component: {fileID: 360537527062656808}
   - component: {fileID: -2259083855632793378}
-  m_Layer: 0
+  - component: {fileID: 1367211426461448953}
+  - component: {fileID: 4110056236736927102}
+  m_Layer: 10
   m_Name: SwordWeapon
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -49,9 +51,9 @@ MonoBehaviour:
   WeaponCurrentlyActive: 1
   InputAuthorized: 1
   TriggerMode: 0
-  DelayBeforeUse: 0.2
+  DelayBeforeUse: 0
   DelayBeforeUseReleaseInterruption: 0
-  TimeBetweenUses: 1
+  TimeBetweenUses: 0.2
   TimeBetweenUsesReleaseInterruption: 1
   UseBurstMode: 0
   BurstLength: 3
@@ -116,7 +118,7 @@ MonoBehaviour:
   HitNonDamageableFeedback: {fileID: 0}
   ExistingDamageArea: {fileID: 0}
   InitialDelay: 0
-  ActiveDuration: 1
+  ActiveDuration: 0.2
   TargetLayerMask:
     serializedVersion: 2
     m_Bits: 8192
@@ -141,7 +143,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AimControl: 1
   AimControlActive: 1
-  RotationMode: 0
+  RotationMode: 1
   WeaponRotationSpeed: 100
   MinimumAngle: -180
   MaximumAngle: 180
@@ -159,3 +161,97 @@ MonoBehaviour:
   CameraTargetOffset: 0.3
   CameraTargetMaxDistance: 10
   CameraTargetSpeed: 5
+--- !u!114 &1367211426461448953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2478617945090025560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73e6bff84700bf74787f775e341f0db6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TargetLayerMask:
+    serializedVersion: 2
+    m_Bits: 8192
+  Owner: {fileID: 0}
+  TriggerFilter: 195
+  MinDamageCaused: 10
+  MaxDamageCaused: 10
+  TypedDamages: []
+  DamageDirectionMode: 1
+  DamageCausedKnockbackType: 1
+  DamageCausedKnockbackDirection: 0
+  DamageCausedKnockbackForce: {x: 10, y: 10, z: 10}
+  InvincibilityDuration: 0.5
+  RepeatDamageOverTime: 0
+  AmountOfRepeats: 3
+  DurationBetweenRepeats: 1
+  DamageOverTimeInterruptible: 1
+  RepeatedDamageType: {fileID: 0}
+  DamageTakenHealth: {fileID: 0}
+  DamageTakenEveryTime: 0
+  DamageTakenDamageable: 0
+  DamageTakenNonDamageable: 0
+  DamageTakenKnockbackType: 0
+  DamageTakenKnockbackForce: {x: 0, y: 0, z: 0}
+  DamageTakenInvincibilityDuration: 0.5
+  HitDamageableFeedback: {fileID: 0}
+  HitNonDamageableFeedback: {fileID: 0}
+  HitAnythingFeedback: {fileID: 0}
+  HitDamageableEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  HitNonDamageableEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  HitAnythingEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!61 &4110056236736927102
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2478617945090025560}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.85, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.8, y: 1}
+  m_EdgeRadius: 0

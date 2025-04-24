@@ -119,7 +119,7 @@ MonoBehaviour:
   ActiveDuration: 1
   TargetLayerMask:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 9216
   MinDamageCaused: 10
   MaxDamageCaused: 10
   Knockback: 0
@@ -141,7 +141,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AimControl: 1
   AimControlActive: 1
-  RotationMode: 0
+  RotationMode: 1
   WeaponRotationSpeed: 100
   MinimumAngle: -180
   MaximumAngle: 180
