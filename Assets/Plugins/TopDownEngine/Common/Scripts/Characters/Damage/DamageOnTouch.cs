@@ -195,6 +195,7 @@ namespace MoreMountains.TopDownEngine
 		protected Vector3 _relativePosition;
 		protected Vector3 _damageScriptDirection;
 		protected Health _collidingHealth;
+		protected CharacterMindControl _mindControl;
 
 		#region Initialization
 		
@@ -547,6 +548,16 @@ namespace MoreMountains.TopDownEngine
 		{
 			if (0 == (TriggerFilter & TriggerAndCollisionMask.OnTriggerEnter2D)) return;
 			Colliding(collider.gameObject);
+
+			//mind control
+			_mindControl = collider.GetComponent<CharacterMindControl>();
+			if (_mindControl != null)
+			{
+				if (transform.root.CompareTag("Player"))
+				{
+					_mindControl.ApplyMindControl();
+				}
+			}
 		}
 
 		/// <summary>
@@ -557,6 +568,7 @@ namespace MoreMountains.TopDownEngine
 		{
 			if (0 == (TriggerFilter & TriggerAndCollisionMask.OnTriggerStay)) return;
 			Colliding(collider.gameObject);
+
 		}
 
 		/// <summary>

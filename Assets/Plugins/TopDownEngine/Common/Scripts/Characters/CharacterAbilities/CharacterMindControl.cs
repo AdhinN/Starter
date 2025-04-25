@@ -4,7 +4,7 @@ using MoreMountains.Tools;
 
 namespace MoreMountains.TopDownEngine // you might want to use your own namespace here
 {
-    [AddComponentMenu("LeolitGames/Scripts/CharacterMindControl")]
+    [AddComponentMenu("TopDown Engine/Character/Abilities/Character Mind Control")]
     public class CharacterMindControl : CharacterAbility
     {
         /// declare your parameters here
