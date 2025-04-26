@@ -46,10 +46,10 @@ namespace MoreMountains.TopDownEngine // you might want to use your own namespac
             IsMindControlled = true;
             _aiDetect.TargetLayer = LayerMask.GetMask("Enemies");
             _aiDetect.Radius = 10;
-            MindControlMMFeedbacks?.PlayFeedbacks(this.transform.position);
 
             yield return new WaitForSeconds(MindControlDuration);
 
+            MindControlMMFeedbacks?.PlayFeedbacks(this.transform.position);
             _aiDetect.Radius = 5;
             _aiDetect.TargetLayer = LayerMask.GetMask("Player");
             IsMindControlled = false;
