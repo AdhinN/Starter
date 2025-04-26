@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using MoreMountains.Tools;
+using MoreMountains.Feedbacks;
 
 namespace MoreMountains.TopDownEngine // you might want to use your own namespace here
 {
@@ -9,6 +10,7 @@ namespace MoreMountains.TopDownEngine // you might want to use your own namespac
     {
         /// declare your parameters here
         public float MindControlDuration = 10f;
+        public MMFeedbacks MindControlMMFeedbacks;
         public bool IsMindControlled { get; private set; }
         private AIDecisionDetectTargetRadius2D _aiDetect;
 
@@ -19,6 +21,7 @@ namespace MoreMountains.TopDownEngine // you might want to use your own namespac
         {
             base.Initialization();
             _aiDetect = GetComponent<AIDecisionDetectTargetRadius2D>();
+            MindControlMMFeedbacks?.Initialization(this.gameObject);
         }
 
         /// <summary>
@@ -43,6 +46,7 @@ namespace MoreMountains.TopDownEngine // you might want to use your own namespac
             IsMindControlled = true;
             _aiDetect.TargetLayer = LayerMask.GetMask("Enemies");
             _aiDetect.Radius = 10;
+            MindControlMMFeedbacks?.PlayFeedbacks(this.transform.position);
 
             yield return new WaitForSeconds(MindControlDuration);
 
